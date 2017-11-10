@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title> Game Over </title>
+		<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+		<script>
+			function start(){
+				var soundEffect = new Audio ('Music/YOU LOSE!.mp3');
+				soundEffect.play();
+				sjs.open("target",500,500);
+				var gameover_text = new sjs.Text("YOU LOSE! GOOD DAY!",28, 'red');
+				var soundEffect = new Audio ('Music/YOU LOSE!.mp3');
+				soundEffect.play();
+				var restartBtn = new sjs.Button('Would you like to try again?', function()
+				{
+					window.location = 'pong.html';
+				});
+				restartBtn.center();
+				gameover_text.centerH();
+			} //end start
+		</script>
+	</head>
+	<body onload="start()">
+		<h1> Remember The Keys!</h1>
+
+		<div id="target" style="margin:auto;background:black;"></div>
+	</body>
+</html>
